@@ -6,58 +6,51 @@ Bases de la programmation
 
 Ce dépôt contient les ressources pour le cours R101_1 du département de l'IUT de Villetaneuse. Ces ressources sont libres mais sous copy left.
 
-## Accès aux données du dépôt 
-*Pour copier les données* dans un répertoire, utiliser la commande 
-```
-git clone git@github.com:iutVilletaneuseDptInfo/R101_1.git
-```
-Cela crée un dépot git intitulé R101_1.
+## Initialisation du dépôt 
 
-*Pour mettre à jour les données*, ouvrir un terminal dans le répertoire R101 et utiliser les commandes
-```
-git commit -am 'MaJ'
-git pull
-```
+Il vous faut : 
+1. Créer un dossier dans votre répertoire sauvegardé
+2. Cloner le dépôt github qui contient tous les supports de cours/TD/TP.
 
-## Environnement interactif : Jupyter Notebook et Python Tutor
-
-### Jupyter Notebook 
-On utilise **Jupyter Notebook**  http://jupyter.org/ pour les supports de cours-TD-TP
-Jupyter Notebook est installable notamment avec Anaconda https://www.anaconda.com/download/
-
-Commande de lancement : `jupyter-notebook`
-
-### Python Tutor 
- **Python Tutor**  permet permet de visualiser l'exécution d'un code en python, ce qui aide à comprendre son fonctionnement.
- 
-*Pour l'installer*, il faut utiliser les commandes suivantes 
-```
-    git clone https://github.com/kandjiabdou/visual_pytutor.git
-    
-    jupyter nbextension install visual_pytutor
-    
-    jupyter nbextension enable visual_pytutor/main
-```    
-Sur les machines de l'IUT seule la dernière commande est nécessaire. Elle doit être exécutée avant le lancement du notebook.
-
-*Pour visualiser le code* : cliquer sur l'oeil qui apparait à gauche de chaque cellule de code, une fenêtre de suivi d'exécution s'ouvre alors. 
-
-## Environnement de travail à l'IUT
-Pour aller dans votre répertoire personnel et y conserver vos programmes, la commande
-```
-cd Mes_Montages/numero_etudiant 
-```
-permet d'accéder à votre repertoire personnel
-
-Ouvrir avec le clic droit de la souris un terminal dans `Mes_Montages` et lancer Python Tutor et Jupyter notebook. 
-
-## Mise à jour automatique du dépôt
-
-Pour mettre à jour automatiquement le dépôt (ie, récupérer les nouveaux chapitres), vous pouvez exécuter le script `updateDepot` situé dans le répertoire cloné :
+Pour cela, ouvrez un terminal et copiez/collez les instructions suivantes :
 ```bash
-./updateDepot
+mkdir Bureau/Mes_Montages/$USER/R101_1
+cd Bureau/Mes_Montages/$USER/R101_1
+git clone https://github.com/iutVilletaneuseDptInfo/R101_1.git
 ```
 
+## Mise-à-jour du dépôt en début de séance
+
+À chaque début de séance, vous devez mettre à jour le dépôt et lancer le logiciel `jupyter notebook`. 
+
+Pour cela, ouvrez un terminal et copier/coller les instructions suivantes :
+
+```bash
+cd Bureau/Mes_Montages/$USER/R101_1
+./updateDepot
+jupyter-notebook
+```
+
+
+
+## Outils utilisés
+
+La ressource R101 s'appuie sur les outils suivants : 
+* un interpréteur python 
+* le logiciel `jupyter-notebook`
+* Plusieurs packages python
+
+Ces logiciels sont déjà installés sur les machines de l'iut. Si vous souhaitez un environnement de dévoloppement chez vous, vous pouvez installer : 
+* [`JupyterLab Desktop`](https://github.com/jupyterlab/jupyterlab-desktop#installation) : le logiciel `jupyterLab` est similaire au logiciel `jupyter-notebook` et la version `Desktop` installe également l'interpréteur python.
+
+* Il est également possible d'installer différents packages optionnels pour améliorer le confort d'utilisation de `jupyterLab`. Ces packages s'installent en exécutant dans une cellule d'un notebook l'instruction suivante : 
+  ```jupyter
+  %pip install <package_name>
+  ```
+  Les packages optionnels sont : 
+  * `matplotlib` : pour pouvoir afficher des courbes
+  * `pytutor` : pour avoir accéder au site python tutor directement à partir d'un notebook
+  * `ipyturtle3` : pour pouvoir faire les tp avec la tortue
 
 ## Contributeurs pour la réalisation de ces supports de cours :
 * Hanane Azzag
