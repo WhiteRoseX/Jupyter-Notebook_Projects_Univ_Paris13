@@ -14,9 +14,9 @@ Il vous faut :
 
 Pour cela, ouvrez un terminal et copiez/collez les instructions suivantes :
 ```bash
-mkdir Bureau/Mes_Montages/$USER/R101_1
-cd Bureau/Mes_Montages/$USER/R101_1
-git clone https://github.com/iutVilletaneuseDptInfo/R101_1.git
+mkdir ~/Bureau/Mes_Montages/$USER/R101_1
+cd ~/Bureau/Mes_Montages/$USER/R101_1
+git clone https://github.com/iutVilletaneuseDptInfo/R101_1.git .
 ```
 
 ## Mise-à-jour du dépôt en début de séance
@@ -26,7 +26,7 @@ git clone https://github.com/iutVilletaneuseDptInfo/R101_1.git
 Pour cela, ouvrez un terminal et copier/coller les instructions suivantes :
 
 ```bash
-cd Bureau/Mes_Montages/$USER/R101_1
+cd ~/Bureau/Mes_Montages/$USER/R101_1
 ./updateDepot
 jupyter-notebook
 ```
